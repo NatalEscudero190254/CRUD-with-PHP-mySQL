@@ -42,10 +42,10 @@
     <title>CRUD</title>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container text-center">
         <div class="row">
         
-            <div class="col-md-3">
+            <div class="col-3">
             
                 <h1>Ingrese Datos</h1>
                 <form action="add.php" method="POST">
@@ -58,11 +58,9 @@
 
                     <input type="submit" class="btn btn-primary">
                 </form>
-                <div id="chart" >
-            
+               
             </div>
-            </div>
-                <div class="col-md-8">
+            <div class="col-6">
                     <table class="table">
                         <thead class="table-succes table-stripped">
                             <tr>
@@ -88,10 +86,10 @@
                                     <th><a href="updateForm.php?ID=<?php echo $row["ID"] ?>" class="btn btn-info">Editar</a></th>
                                     <th><a href="delete.php?ID=<?php echo $row["ID"] ?>" class="btn btn-danger">Eliminar</a></th>
 
-
+                                    
                                 </tr>
                                 
-                            <?php
+                                <?php
                                 }
                             ?>
                         </tbody>
@@ -99,13 +97,17 @@
                 </div>
                 
                 
+                <div id="chart" class="col-3">
+                <h1>Tabla Dividida por SEXO</h1>
+                </div>
+                
                 
             </div>
             
-
+            
     </div>
-        <script>
-
+    <script>
+        
             
             let options = {
             series: [<?php echo $row2['CANTIDAD']?>, 6],
